@@ -1,0 +1,28 @@
+The purpose of this program is to mimic managing a Video Store Inventory 
+
+This program allows a user to manage the inventory of a store that sells DVDs. 
+
+The inventory for the video store will contain the following information for each movie
+(each title) in the inventory:
+
+    SKU (stock-keeping unit, an integer, must be unique)
+    title (may contain spaces in it)
+    price (dollars and cents, greater than 0)
+    quantity (number of copies in inventory, greater than or equal to 0)
+
+The program should offer the user a menu with the following options:
+    1. Add a movie to the inventory (prompt user for input values in this order: sku,
+    title, price, quantity).
+    2. Remove a movie from the inventory (by sku).
+    3. Display the information for a movie (given the sku).
+    4. Display the inventory in a table (in any order).
+    5. Quit
+    
+The program should perform the operation selected by number and then re-display the
+menu. If the operation fails (i.e. invalid input or attempt to remove a movie not in the
+inventory) your program should display an error message and return to the menu. 
+
+Your program should store the inventory in a file between executions of the program, so
+that when the program is run again it will start up with the same inventory contents as
+when it last terminated (use serialization!). Your program must run even if the file is
+not present (initial inventory will be empty).
