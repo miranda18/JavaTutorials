@@ -1,0 +1,45 @@
+The purpose of this program is to simulate mangaging an inventory for a books, toys, and video store by using inheritance
+
+The Books, Toys, and Videos all have common attributes being: 
+
+    - SKU (stock-keeping unit, an integer, must be unique)
+    - title (may contain spaces in it)
+    - price (dollars and cents, greater than 0)
+    - quantity (number of copies in inventory, greater than or equal to 0)
+    
+ Along with these common attributes, each item needs additional attributes, depending on what the product type:
+ 
+    - Movies (DVDs) Need:
+         * a UPC (universal product code)
+    - Books Need:
+         * an ISBN (international standard book number)
+         * author name 
+    - Toys 
+         * weight (in ounces)
+
+The program should offer the user a menu with the following options:
+
+    1. Add a product to the inventory (user should enter a letter (M or B or T) to
+    indicate the product category and then input corresponding values).
+    2. Remove a product from the inventory (by sku).
+    3. Display the information for a product (given the sku).
+    4. Display the inventory in a table, sorted by sku.
+    5. Display the inventory in a table, sorted by title.
+    6. Process a sale.
+    7. Quit
+    
+    
+ When processing a sale, each product has different shipping credits and commission percentage: 
+    Product Type      Shipping credit     Commission
+    Movie             $2.98               12% of price
+    Book              $3.99               15% of price 
+    Toys              $4.49 + $0.50 /lb   15% of price
+    
+ Once user processes sale the following is outputted: 
+ 
+    Total price (the product’s price times the quantity sold)
+    Total shipping credit (the product’s shipping credit times the quantity sold)
+    Total commission (the product’s commission times the quantity sold)
+    Profit = Total price + Total shipping credit - (Total commission + shipping cost)
+ 
+    
